@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Some stats about Nginx logs stored in MongoDB"""
+""" provides some stats about Nginx logs stored in MongoDB """
+
 
 from pymongo import MongoClient
 
 
 if __name__ == "__main__":
-    """method to count document in client Nginx"""
+    """ provides some stats about Nginx logs stored in MongoDB """
     client = MongoClient('mongodb://127.0.0.1:27017')
     collection = client.logs.nginx
     count = collection.count_documents({})
